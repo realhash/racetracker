@@ -43,10 +43,10 @@ app.post('/register', async (req, res) => {
 });
 
 app.post('/createrace-unofficial', async (req, res) => {
-  const { userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid } = req.body;
-  const query = 'INSERT INTO user_races (email, name, organizer, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  const { userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo } = req.body;
+  const query = 'INSERT INTO user_races (email, name, organizer, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
   
-  db.query(query, [userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid], (err, result) => {
+  db.query(query, [userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo], (err, result) => {
     if (err) {
       if (err.code === 'ER_DUP_ENTRY') {
         return res.status(409).send({ message: 'Race already exists' });
@@ -58,10 +58,10 @@ app.post('/createrace-unofficial', async (req, res) => {
 });
 
 app.post('/createrace-official', async (req, res) => {
-  const { race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid } = req.body;
-  const query = 'INSERT INTO races (name, organizer, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  const { race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo} = req.body;
+  const query = 'INSERT INTO races (name, organizer, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
   
-  db.query(query, [race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid], (err, result) => {
+  db.query(query, [race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo], (err, result) => {
     if (err) {
       if (err.code === 'ER_DUP_ENTRY') {
         return res.status(409).send({ message: 'Race already exists' });

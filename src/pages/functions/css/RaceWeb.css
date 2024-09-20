@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.siterace-BG {
+    background-image: url("https://images.unsplash.com/photo-1518865946071-1dbcc3ab617c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.siterace-BG h1 {
+    z-index: 8000;
+    color: #fff;
+    position: absolute;
+    top: 5em;
+}
+
+.siterace-INSIDE {
+    background-color: #1c1f2b;
+    width: 30%;
+    max-width: 1400px;
+    height: 65%;
+    margin: auto auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    top: 20%;
+}
+
+.INSIDE-name {
+    font-size: 30px;
+}
+
+.INSIDE-host {
+    font-size: 25px;
+    color: #999;
+    margin-left: 50%;
+    margin-top: -40px;
+}
+
+.siterace-HEATINFO {
+    margin-top: 20px;
+    background-color: #292D3F;
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.siterace-HEATINFO .INSIDE-title {
+    color: #81bebe;
+}
+
+.siterace-HEATINFO p strong {
+    color: #016764;
+}
+
+.siterace-HEATINFO p {
+    color: #999;
+}
+
+.siterace-BASICINFO {
+    background-color: #292D3F;
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.siterace-BASICINFO .INSIDE-title {
+    color: #81bebe;
+}
+
+.siterace-BASICINFO p strong {
+    color: #016764;
+}
+
+.siterace-BASICINFO p {
+    color: #999;
+}
+
+.siterace-BTN1 {
+    position: relative;
+    padding: 15px 45px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    left: 46.8em;
+    top: 8em;
+    margin-right: 10px;
+}
+
+.siterace-BTN2 {
+    position: relative;
+    padding: 15px 45px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    left: 46.8em;
+    top: 8em;
+}
+
+.siterace-BTN2:hover, .siterace-BTN1:hover {
+    background-color: #0056b3;
+}

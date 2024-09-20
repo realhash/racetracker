@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import StartOCR from './pages/begynd-paa-ocr';
 import Hjaelp from './pages/Hjaelp';
 import Races from './pages/Races';
+import { generateRaceSite } from './pages/functions/generateRaceWeb';
 import CreateRace, { CreateUNOFFICIAL, CreateOFFICIAL } from './pages/create-race';
 import PublicRoute from './auth/PublicRoute';
 import AuthGuard from './auth/AuthGuard';
@@ -25,9 +26,12 @@ interface Race {
     distance: number;
     billet: string;
     website: string;
+    elite: string;
+    jrelite: string;
     email: string;
     official: string;
     uuid: string;
+    heatinfo: string;
   }
 
 const App: React.FC = () => {
@@ -127,13 +131,27 @@ const App: React.FC = () => {
                             </AuthGuard>
                         } 
                     />
-                    {races.map((race) => (
+                    {races.map((race, index) => (
                         <Route
                             key={race.uuid}
                             path={`/races/${race.uuid}`}
                             element={
                             <AuthGuard>
-                                <Races />
+                                {generateRaceSite(
+                                    races[index].name, 
+                                    races[index].organizer, 
+                                    races[index].price, 
+                                    races[index].date, 
+                                    races[index].address, 
+                                    races[index].country, 
+                                    races[index].forhindringer, 
+                                    races[index].distance, 
+                                    races[index].elite, 
+                                    races[index].jrelite,
+                                    races[index].heatinfo,
+                                    races[index].billet,
+                                    races[index].website
+                                )}
                             </AuthGuard>
                             }
                         />

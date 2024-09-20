@@ -128,7 +128,8 @@
 
 .inside-box form button {
     top: 96%;
-    transform: translateY(-96%);
+    left: 15%;
+    transform: translate(-15%, -96%);
     color: #fff;
     background-color: #007BFF;
     border:none;

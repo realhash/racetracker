@@ -58,6 +58,7 @@ export function CreateUNOFFICIAL() {
     const [website, setWebsite] = useState('');
     const [elite, setElite] = useState('');
     const [jrelite, setJrelite] = useState('');
+    const [heatinfo, setHeatinfo] = useState('');
     const [official, setOfficial] = useState('false');
 
     const [error, setError] = useState('');
@@ -72,7 +73,7 @@ export function CreateUNOFFICIAL() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid }),
+          body: JSON.stringify({ userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo }),
         });
     
         if (response.ok) {
@@ -192,6 +193,14 @@ export function CreateUNOFFICIAL() {
                                     placeholder="Ja/Nej"
                                     required
                                 />
+                                <p>Heat Info</p>
+                                <input
+                                    type="text"
+                                    value={heatinfo}
+                                    onChange={(e) => setHeatinfo(e.target.value)}
+                                    placeholder="Basisk heat info.."
+                                    required
+                                />
                             </div>
                         </div>
                         <button type="submit">Opret</button>
@@ -215,6 +224,7 @@ export function CreateOFFICIAL() {
     const [website, setWebsite] = useState('');
     const [elite, setElite] = useState('');
     const [jrelite, setJrelite] = useState('');
+    const [heatinfo, setHeatinfo] = useState('');
     const [official, setOfficial] = useState('false');
 
     const [error, setError] = useState('');
@@ -229,7 +239,7 @@ export function CreateOFFICIAL() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid }),
+          body: JSON.stringify({ race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid, heatinfo }),
         });
     
         if (response.ok) {
@@ -347,6 +357,14 @@ export function CreateOFFICIAL() {
                                     value={jrelite}
                                     onChange={(e) => setJrelite(e.target.value)}
                                     placeholder="Ja/Nej"
+                                    required
+                                />
+                                <p>Heat Info</p>
+                                <input
+                                    type="text"
+                                    value={heatinfo}
+                                    onChange={(e) => setHeatinfo(e.target.value)}
+                                    placeholder="Basisk heat info.."
                                     required
                                 />
                             </div>
