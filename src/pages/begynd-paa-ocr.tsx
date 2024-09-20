@@ -100,6 +100,12 @@ export default function StartOCR() {
                 <div className={selectedPage === 'elite-lober' ? 'elite-lober' : 'elite-lober disable'}>
                     <h2>Elite Løber</h2>
                     <p>Ønsker du at tage konkurrencen i OCR mere seriøs? Læs hvordan og hvad Elite indgår i.</p>
+                    <div className="inside">
+                        <h3 style={{color: '#81bebe', marginLeft: '20px'}}>Hvad er en Elite Løber:</h3>
+                        <ul style={{color: '#999', marginLeft: '20px', marginRight: '20px'}}>
+                            <li><strong>Definition:</strong> En elite løber er dem som ikke bare løber for sjov, men også for konkurrencen. Som elite har du mulighed for DM, EM og VM ved nogen races.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className={selectedPage === 'pakkeliste' ? 'pakkeliste' : 'pakkeliste disable'}>
@@ -122,13 +128,10 @@ export default function StartOCR() {
                 <div className={selectedPage === 'hurtig-guide' ? 'hurtig-guide' : 'hurtig-guide disable'}>
                     <h2>Hurtig Guide</h2>
                     <p>Her er vores hurtig guide til at komme igang med OCR!</p>
+                    <div className="inside">
+                        
+                    </div>
                 </div>
-
-                <div className={selectedPage === 'tips-og-tricks' ? 'tips-og-tricks' : 'tips-og-tricks disable'}>
-                    <h2>Tips og Tricks</h2>
-                    <p>Læs vores bedste tips og tricks omkring OCR!</p>
-                </div>
-
             </div>
         </>
     )
