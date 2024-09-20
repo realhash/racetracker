@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import React, { useState, useEffect } from 'react';
 import { useAuth } from "../auth/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { generateUUID } from "./functions/GenerateUUID";
 import './css/create-race.css'
 import e from "express";
 
@@ -63,13 +64,15 @@ export function CreateUNOFFICIAL() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        const uuid = generateUUID();
     
         const response = await fetch('http://localhost:5000/createrace-unofficial', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite }),
+          body: JSON.stringify({ userEmail, race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid }),
         });
     
         if (response.ok) {
@@ -218,13 +221,15 @@ export function CreateOFFICIAL() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        const uuid = generateUUID();
     
         const response = await fetch('http://localhost:5000/createrace-official', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite }),
+          body: JSON.stringify({ race, organier, price, date, country, address, forhindringer, distance, billet, website, elite, jrelite, uuid }),
         });
     
         if (response.ok) {
