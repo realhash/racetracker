@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../auth/AuthContext';
 import { useNavigate } from "react-router-dom";
 import { calculateAge } from './functions/AgeCalculator';
+import { formatDate } from './functions/formatDate';
 
 import './css/Calender.css';
 import './css/Home.css';
@@ -56,6 +57,7 @@ interface Race {
   website: string;
   email: string;
   official: string;
+  uuid: string;
 }
 
 const Home: React.FC = () => {
@@ -136,17 +138,6 @@ const Home: React.FC = () => {
       window.open(side, '_blank', 'noopener,noreferrer');
     }
 
-    const formatDate = (dateString: string) => {
-      const [day, month, year] = dateString.split("-");
-      const date = new Date(+year, +month - 1, +day);
-      const formattedDate = new Intl.DateTimeFormat('da-DK', {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric'
-      }).format(date);
-      return formattedDate.replace(/(\d{1,2})\s/, '$1. '); 
-    };
-
     useEffect(() => {
         if (userEmail) {
             const fetchUsersData = axios.get<User[]>(`http://localhost:5000/users?email=${encodeURIComponent(userEmail)}`);
@@ -204,7 +195,7 @@ const Home: React.FC = () => {
                                   <p><strong>Pris:</strong> {race.price},- DKK</p>
                                   <p><strong>Land:</strong> {race.country}</p>
                                 </div>
-                                <button className="detailsButton">DETALJER</button>
+                                <button className="detailsButton" onClick={() => switchSide("races/" + races[index].uuid)}>DETALJER</button>
                             </div>
                         ))}
                     </div>
@@ -229,7 +220,7 @@ const Home: React.FC = () => {
                                 <p><strong>Forhindringer:</strong> +{closestRaceByDate ? closestRaceByDate.forhindringer : 'Ukendt'}</p>
                                 <p><strong>Land:</strong> {closestRaceByDate ? closestRaceByDate.country :'Ukendt'}</p>
                                 {closestRaceByDate ? <p><strong>Viden:</strong> ønsker du at vide mere omkring løbet kan du trykke på <b>DETALJER</b> knappen nede under</p> : ''}
-                                <button className="detailsButton2">DETALJER</button>
+                                <button className="detailsButton2" onClick={() => switchSide("races/" + closestRaceByDate?.uuid)}>DETALJER</button>
                                 <button className="detailsButton3" onClick={() => goToWeb("" + closestRaceByDate?.billet)}>KØB BILLET</button>
                                 <button className="detailsButton4" onClick={() => goToWeb("" + closestRaceByDate?.website)}>HJEMMESIDE</button>
                               </div>
