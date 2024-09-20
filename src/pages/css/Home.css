@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.homePage {
+    background-image:url("https://images.unsplash.com/photo-1522866348293-55be2c6caa1f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover; /* Ensures it scales properly */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: relative;
+}
+
+.selection {
+    width: 25em;
+    max-width: 100%;
+    height: 30em;
+    background: #292D3F;
+    position: absolute;
+    top: 6em;
+    left: 87em;
+    border-radius: 8px;
+}
+
+.nyheder {
+    width: 38em;
+    max-width: 100%;
+    height: 20em;
+    background: #292D3F;
+    position: absolute;
+    top: 6em;
+    left: 7em;
+    padding: 15px 15px;
+    border-radius: 8px;
+}
+
+.Calendar{
+    position: fixed;
+    top: 37em;
+    left: 87em;
+}
+
+.start-ocr {
+    width: 30em;
+    max-width: 100%;
+    height: 20em;
+    background: #292D3F;
+    position: absolute;
+    top: 30em;
+    left: 7em;
+    border-radius: 8px;
+}
+
+.ocr-start{
+    width: 28.5em;
+    max-width: 100%;
+    height: 18.5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1c1f2b;
+    position: absolute;
+    border-radius: 8px;
+
+}
+
+.start-ocr h2 {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+.start-ocr p {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #999;
+}
+
+.personlig2 {
+    width: 34em;
+    max-width: 100%;
+    height: 22em;
+    background: #292D3F;
+    position: absolute;
+    top: 6em;
+    left: 50em;
+    border-radius: 8px;
+}
+
+.personlig3 {
+    width: 25em;
+    max-width: 100%;
+    height: 21em;
+    background: #292D3F;
+    position: absolute;
+    top: 40em;
+    left: 75em;
+    border-radius: 8px;
+}
+
+.reklame {
+    width: 64em;
+    max-width: 100%;
+    height: 10em;
+    background: #292D3F;
+    position: absolute;
+    top: 53em;
+    left: 7em;
+    border-radius: 8px;
+}
+
+.reklame img {
+    width: 40%;
+    position: fixed;
+    z-index: 8000;
+    top: 46.5em;
+}
+
+.reklame button {
+    font-weight: 700;
+    position: fixed;
+    left: 65em;
+    top: 66.6em;
+    border: none;
+    border-radius: 8px;
+    width: 17em;
+    height: 6em;
+    color: #fff;
+    background-color: #00312F;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.reklame button:hover {
+    border: #014b48;
+    border-style: solid;
+}
+
+.nyheder .header{
+    position: absolute;
+    top: 14px;
+    color: #fff;
+}
+
+.nyheder h2{
+    position: absolute;
+    top: 3px;
+    color: #fff;
+}
+
+.temptxt {
+    position: absolute;
+    z-index: 8000;
+    color: green;
+}
+
+.selection {
+    color: #fff;
+}
+
+.closeRace p {
+    color: #999;
+}
+
+.closeRace p strong {
+    color: #014848;
+}
+
+.closeRace {
+    display: fixed;
+    background-color: #1c1f2b;
+    width: 23em;
+    height: 25em;
+    margin-top: -.5em;
+    margin-left: 1em;
+    border-radius: 8px;
+    color: #81bebe;
+}
+
+.selection h2 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.closeRace h3 {
+    margin-left: 20px;
+    font-size: 19px;
+    margin-top: -10px;
+    color: #999;
+}
+
+.closeRace p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.2;
+    margin-left: 20px;
+}
+
+.detailsButton2 {
+    position: absolute;
+    right: 17.2em;
+    bottom: 3em;
+    padding: 10px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+.detailsButton3 {
+    position: absolute;
+    right: 10em;
+    bottom: 3em;
+    padding: 10px 10px;
+    background-color: #03af20;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.detailsButton4 {
+    position: absolute;
+    right: 1.9em;
+    bottom: 3em;
+    padding: 10px 10px;
+    background-color: #ffae00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.raceList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 38em;
+    height: 17em;
+    margin-top: 2.9em;
+    gap: 10px;
+}
+
+.raceCard {
+    width: 24em;
+    height: 7em;
+    padding: 5px;
+    border: 1px solid #1c1f2b;
+    border-radius: 8px;
+    background-color: #1c1f2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 0.75em;
+    position: relative;
+    color: #81bebe;
+}
+
+.down1 {
+    position: relative;
+    top: 10%;
+}
+
+.raceCard .raceDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.raceCard p {
+    margin: 0;
+    margin-top: 2px;
+    font-size: 1em;
+    line-height: 1.2;
+    color: #999;
+}
+
+.raceCard p strong {
+    color: #016764;
+}
+
+.raceCard h2 {
+    margin: 0;
+    font-size: 1.15em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    color: #81bebe;
+}
+
+.detailsButton {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.detailsButton:hover {
+    background-color: #0056b3;
+}
+
+.detailsButton2:hover {
+    background-color: #0056b3;
+}
+
+.detailsButton3:hover {
+    background-color: rgb(1, 95, 37);
+}
+
+.detailsButton4:hover {
+    background-color: rgb(179, 122, 0);
+}
+
+.quick-guideBTN {
+    position: absolute;
+    right: 12em;
+    bottom: 1.5em;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 15em;
+}
+
+.quick-guideBTN:hover {
+    background-color: #0056b3;
+}
+
+.profileBTN {
+    position: relative;
+    top: 4.5em;
+    left: 1em;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 15em;
+}
+
+.profileBTN2 {
+    position: relative;
+    top: 11em;
+    left: 1em;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 14em;
+    margin-right: 30px;
+}
+
+.profileBTN3 {
+    position: relative;
+    top: 11em;
+    left: 1em;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 14em;
+    margin-right: 30px;
+}
+
+.profileBTN2:hover {
+    background-color: #0056b3;
+}
+
+.profileBTN3:hover {
+    background-color: #0056b3;
+}
+
+.create-race {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #2ea44f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    width: 12em;
+    bottom: 20.3em;
+    left: 26em;
+}
+
+.create-race:hover {
+    background-color: #94d3a2;
+}
+
+
+
+.profileBTN:hover {
+    background-color: #0056b3;
+}
+
+.ocr1 {
+    position: fixed;
+    width: 12em;
+    left: 24em;
+}
+
+.statistic p {
+    color: #999;
+}
+
+.statistic p strong {
+    color: #016764;
+}
+
+.personlig2 h2 {
+    position: relative;
+    margin-left: 35px;
+    top: 35px;
+    color: #81bebe;
+}
+
+.statistic {
+    display: fixed;
+    background-color: #1c1f2b;
+    width: 32em;
+    height: 19em;
+    margin-top: -0.6em;
+    margin-left: 1em;
+    border-radius: 8px;
+    color: #016764;
+}
+
+.statistic2 {
+    position: fixed;
+    top: 11em;
+}
+
+.statistic h3 {
+    margin-left: 20px;
+    font-size: 19px;
+    margin-top: -20px;
+    color: #999;
+}
+
+.statistic p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.2;
+    margin-left: 20px;
+}

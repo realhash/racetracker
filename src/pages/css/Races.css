@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.racesBG {
+    background-image: url("https://images.unsplash.com/photo-1495821697794-a40e5fca2830?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.inside {
+    background-color: #292D3F;
+    width: 100%;
+    max-width: 1400px;
+    height: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    top: 10%;
+}
+
+.inside h2 {
+    margin-bottom: 10px;
+}
+
+.inside p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #014848;
+    width: 95%;
+    height: 85%;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6em;
+}
+
+.box::-webkit-scrollbar {
+    display: none;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    width: calc(100% - 250px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #292D3F;
+    background-color: #292D3F;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1em;
+    outline: none;
+}
+
+.filter-select {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-select label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    margin-right: 20px;
+}
+
+.filter-group p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.filter-group input[type="checkbox"] + span {
+    vertical-align: middle;
+}
+
+.racelist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.raceBox {
+    width: calc(50% - 20px);
+    background-color: #1c1f2b;
+    border: 1px solid #292D3F;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #81bebe;
+    box-sizing: border-box;
+}
+
+.raceBox h2 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.raceBox p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.raceBox .buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    min-width: 310px;
+    text-align: center;
+}
+
+.buyBUTTON {
+    background-color: #007BFF;
+}
+
+
+.detailButton22 {
+    background-color: #007BFF;
+}
+
+.reset-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: -10px;
+}
+
+.reset-button:hover {
+    background-color: #cc0000;
+}
+
+
+.raceBox strong {
+    color: #016764;;
+}
+
+.detailButton22 {
+    background-color: #007BFF;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.createrace {
+    background-color: #2ea44f;
+    padding: 15px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    font-weight: 500;
+    left: 87.5em;
+    top: 1.5em;
+}
+
+.filters {
+    margin-bottom: 0px;
+}
+
+.filter-select {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group p {
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .raceBox {
+        width: 100%;
+    }
+
+    .searchBar {
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Style for dropdown filters */
+.filter-select-dropdown {
+    padding: 0rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .filter-select-dropdown:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+  
+  .filter-select-dropdown option {
+    padding: 0.5rem;
+  }
+  
