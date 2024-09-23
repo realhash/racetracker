@@ -29,6 +29,8 @@ export default function Header() {
             setSelectedNav('races');
         } else if (location.pathname === '/races/create') {
             setSelectedNav('races');
+        } else if (location.pathname === '/races/compare') {
+            setSelectedNav('races');
         }
     }, [location.pathname]);
 

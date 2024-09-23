@@ -76,9 +76,9 @@ export default function Races() {
         updatedFilters[category] = checked ? [value] : [];
       } else if (category === 'distance' || category === 'obstacles') {
         if (checked) {
-          updatedFilters[category] = [value]; // Only allow one selection
+          updatedFilters[category] = [value];
         } else {
-          updatedFilters[category] = []; // Deselect
+          updatedFilters[category] = [];
         }
       } else {
         if (checked) {
@@ -246,6 +246,16 @@ export default function Races() {
           </div>
           <button className="createrace" onClick={() => switchSide("races/create")}>OPRET LØB</button>
         </div>
+      </div>
+    </>
+  );
+}
+
+export function CompareRaces() {
+  return (
+    <>
+      <div className="compareRaces-BG">
+        <Header />
       </div>
     </>
   );

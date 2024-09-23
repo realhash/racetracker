@@ -7,7 +7,8 @@ import Login from './auth/Login';
 import Home from './pages/Home';
 import StartOCR from './pages/begynd-paa-ocr';
 import Hjaelp from './pages/Hjaelp';
-import Races from './pages/Races';
+import Races, { CompareRaces } from './pages/Races';
+import Faellesskab from './pages/Faellesskab';
 import { generateRaceSite } from './pages/functions/generateRaceWeb';
 import CreateRace, { CreateUNOFFICIAL, CreateOFFICIAL } from './pages/create-race';
 import PublicRoute from './auth/PublicRoute';
@@ -100,6 +101,14 @@ const App: React.FC = () => {
                         } 
                     />
                     <Route 
+                        path="/races/compare" 
+                        element={
+                            <AuthGuard>
+                                <CompareRaces />
+                            </AuthGuard>
+                        } 
+                    />
+                    <Route 
                         path="/begynd-paa-ocr" 
                         element={
                             <AuthGuard>
@@ -127,7 +136,7 @@ const App: React.FC = () => {
                         path="/faellesskab" 
                         element={
                             <AuthGuard>
-                                <Home />
+                                <Faellesskab />
                             </AuthGuard>
                         } 
                     />

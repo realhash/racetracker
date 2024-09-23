@@ -58,6 +58,8 @@ interface Race {
   email: string;
   official: string;
   uuid: string;
+  elite: string;
+  jrelite: string;
 }
 
 const Home: React.FC = () => {
@@ -219,6 +221,8 @@ const Home: React.FC = () => {
                                 <p><strong>Distance:</strong> {closestRaceByDate ? closestRaceByDate.distance : 'Ukendt'} KM</p>
                                 <p><strong>Forhindringer:</strong> +{closestRaceByDate ? closestRaceByDate.forhindringer : 'Ukendt'}</p>
                                 <p><strong>Land:</strong> {closestRaceByDate ? closestRaceByDate.country :'Ukendt'}</p>
+                                <p><strong>Elite:</strong> {closestRaceByDate ? closestRaceByDate.elite :'Ukendt'}</p>
+                                <p><strong>Jr. Elite:</strong> {closestRaceByDate ? closestRaceByDate.jrelite :'Ukendt'}</p>
                                 {closestRaceByDate ? <p><strong>Viden:</strong> ønsker du at vide mere omkring løbet kan du trykke på <b>DETALJER</b> knappen nede under</p> : ''}
                                 <button className="detailsButton2" onClick={() => switchSide("races/" + closestRaceByDate?.uuid)}>DETALJER</button>
                                 <button className="detailsButton3" onClick={() => goToWeb("" + closestRaceByDate?.billet)}>KØB BILLET</button>
